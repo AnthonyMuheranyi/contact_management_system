@@ -105,7 +105,17 @@ void displayContacts() {
 int main() {
     int choice;
    do {
-       
+        cout << "\nContact Management System\n";
+        cout << "1. Add Contact\n";
+        cout << "2. Search Contact\n";
+        cout << "3. Modify Contact\n";
+        cout << "4. Display All Contacts\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        cin.ignore(); // Clear input buffer
+
+        
 }
 
 
