@@ -75,7 +75,8 @@ void modifyContact(const string& name) {
         }
     }
 
-   
+    if (found) {
+       
 }
 
 
