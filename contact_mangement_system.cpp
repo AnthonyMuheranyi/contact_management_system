@@ -45,7 +45,16 @@ void searchContact(const string& name) {
     bool found = false;
     for (const auto& contact : contacts) {
         if (contact.name == name) {
-            
+            cout << "Contact found:\n";
+            cout << "Name: " << contact.name << "\n";
+            cout << "Phone: " << contact.phone << "\n";
+            cout << "Email: " << contact.email << "\n";
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cout << "Contact not found.\n";
+    }
 }
-
 
