@@ -57,7 +57,25 @@ void searchContact(const string& name) {
         cout << "Contact not found.\n";
     }
 }
-void modifyContact(const string& name)
+void modifyContact(const string& name) {
+    vector<Contact> contacts = loadContacts();
+    bool found = false;
+
+    for (auto& contact : contacts) {
+        if (contact.name == name) {
+            cout << "Contact found. Enter new details:\n";
+            cout << "New Name: ";
+            getline(cin, contact.name);
+            cout << "New Phone: ";
+            getline(cin, contact.phone);
+            cout << "New Email: ";
+            getline(cin, contact.email);
+            found = true;
+            break;
+        }
+    }
+
+   
 }
 
 
