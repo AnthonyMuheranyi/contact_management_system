@@ -24,4 +24,5 @@ void saveContact(const Contact& contact) {
 vector<Contact> loadContacts() {
     vector<Contact> contacts;
     ifstream file("contacts.txt");
-    
+    if (file.is_open()) {
+       
