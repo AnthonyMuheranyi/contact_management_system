@@ -11,3 +11,4 @@ struct Contact {
     string email;
 };
 
+void saveContact(const Contact& contact) 
