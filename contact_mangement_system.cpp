@@ -76,7 +76,20 @@ void modifyContact(const string& name) {
     }
 
     if (found) {
-       
+        ofstream file("contacts.txt", ios::trunc);
+        if (file.is_open()) {
+            for (const auto& contact : contacts) {
+                file << contact.name << "," << contact.phone << "," << contact.email << "\n";
+            }
+            file.close();
+            cout << "Contact modified successfully.\n";
+        } else {
+            cout << "Error: Unable to open file for writing.\n";
+        }
+    } else {
+        cout << "Contact not found.\n";
+    }
+
 }
 
 
