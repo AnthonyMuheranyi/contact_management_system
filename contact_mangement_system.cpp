@@ -57,4 +57,8 @@ void searchContact(const string& name) {
         cout << "Contact not found.\n";
     }
 }
+void modifyContact(const string& name)
+}
+
+
 
