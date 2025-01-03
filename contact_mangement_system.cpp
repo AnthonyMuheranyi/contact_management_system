@@ -116,7 +116,41 @@ int main() {
         cin.ignore(); // Clear input buffer
 
         switch (choice) {
-            
+            case 1: {
+                Contact contact;
+                cout << "Enter Name: ";
+                getline(cin, contact.name);
+                cout << "Enter Phone: ";
+                getline(cin, contact.phone);
+                cout << "Enter Email: ";
+                getline(cin, contact.email);
+                saveContact(contact);
+                break;
+            }
+            case 2: {
+                string name;
+                cout << "Enter Name to Search: ";
+                getline(cin, name);
+                searchContact(name);
+                break;
+            }
+            case 3: {
+                string name;
+                cout << "Enter Name to Modify: ";
+                getline(cin, name);
+                modifyContact(name);
+                break;
+            }
+            case 4:
+                displayContacts();
+                break;
+            case 5:
+                cout << "Exiting...\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 5);
 
     return 0; 
 
