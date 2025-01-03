@@ -40,4 +40,8 @@ vector<Contact> loadContacts() {
     }
     return contacts;
 }
+void searchContact(const string& name) {
+    
+}
+
 
