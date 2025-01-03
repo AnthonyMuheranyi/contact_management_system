@@ -41,7 +41,11 @@ vector<Contact> loadContacts() {
     return contacts;
 }
 void searchContact(const string& name) {
-    
+    vector<Contact> contacts = loadContacts();
+    bool found = false;
+    for (const auto& contact : contacts) {
+        if (contact.name == name) {
+            
 }
 
 
