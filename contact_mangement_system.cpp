@@ -92,7 +92,19 @@ void modifyContact(const string& name) {
 }
 
 void displayContacts() {
-    
+    vector<Contact> contacts = loadContacts();
+    if (contacts.empty()) {
+        cout << "No contacts found.\n";
+    } else {
+        cout << "Contacts:\n";
+        for (const auto& contact : contacts) {
+            cout << "Name: " << contact.name << ", Phone: " << contact.phone << ", Email: " << contact.email << "\n";
+        }
+    }
+}
+
+
+}
 
 
 
