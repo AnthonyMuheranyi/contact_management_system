@@ -89,8 +89,10 @@ void modifyContact(const string& name) {
     } else {
         cout << "Contact not found.\n";
     }
-
 }
+
+void displayContacts() {
+    
 
 
 
