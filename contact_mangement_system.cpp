@@ -21,4 +21,7 @@ void saveContact(const Contact& contact) {
         cout << "Error: Unable to open file for writing.\n";
     }
 }
-
+vector<Contact> loadContacts() {
+    vector<Contact> contacts;
+    ifstream file("contacts.txt");
+    
