@@ -11,4 +11,6 @@ struct Contact {
     string email;
 };
 
-void saveContact(const Contact& contact) 
+void saveContact(const Contact& contact) {
+    ofstream file("contacts.txt", ios::app);
+    if (file.is_open()) {
